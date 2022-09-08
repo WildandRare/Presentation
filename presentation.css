@@ -1,0 +1,12 @@
+body{
+    background-color:rgb(139, 0, 0);
+}
+
+@font-face{
+    font-family: "FONT";
+    src: url("DIN Bold.ttf");
+}
+
+h2, h1, button{
+    font-family: "FONT";
+}

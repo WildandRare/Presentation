@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Presentation</title>
+        <link href="presentation.css" rel="stylesheet">
+        <script src="presentation.js"></script>
+    </head>
+    <body>
+        <button onclick="nextSlide()" style="width: 49.83%; height:3vw; border-style: solid; border-width: 0.43vw; border-color: black; background-color: rgb(189, 44, 0);
+        font-size: x-large; position: relative;">Next Slide</button>
+        <button onclick="previousSlide()" style="position: relative; width: 49.83%; height:3vw; border-style: solid; border-width: 0.43vw; border-color: black; background-color: rgb(189, 44, 0);
+        font-size: x-large;">Previous Slide</button>
+        <h1 style="text-align: center;">Presentation</h1>
+        <div id="slide"><img src="slides/slideoneJSIMS!!!OYHI!!!!!!!!!.png" id="slideimage" ></div>
+        <h2 style="text-align: center;" id="seconds">120 seconds left</h2>
+        <style>
+            #slide img{
+                width:63%;
+                position: relative;
+                left: 18.3%;
+            }
+        </style>
+        <script>
+            var seconds = 120;
+            setInterval(function(){
+                seconds--
+                if(seconds < 0){
+                    document.getElementById("seconds").innerHTML = "<span style='color: red;'>YOU ARE " + (Math.abs(seconds)).toString() + " SECONDS OVER YOUR TIME</span>"
+                } else {
+                    document.getElementById("seconds").innerHTML = seconds.toString() + " seconds left"
+                }
+            }, 1000)
+        </script>
+    </body>
+</html>
